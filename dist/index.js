@@ -318,15 +318,11 @@
 
 	// attach your plugin to the global 'L' variable
 	if (typeof window !== 'undefined' && window.L) {
-	    if(document.readyState === "complete"){
+	    window.L.leaflet3d = new Plugin();
+	    window.addEventListener("load", () => {
 	        loglevel.exports.debug("Initialized the leaflet-3D plugin");
 	        window.L.leaflet3d = new Plugin();
-	    } else {
-	        window.addEventListener("load", () => {
-	            loglevel.exports.debug("Initialized the leaflet-3D plugin");
-	            window.L.leaflet3d = new Plugin();
-	        });
-	    }
+	    });
 	}
 
 })();
