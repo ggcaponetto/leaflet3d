@@ -6,7 +6,7 @@ export default {
     input: 'src/index.js',
     output: [
         {
-            name: "leaflet-3D",
+            name: "leaflet3d",
             dir: "dist",
             format: 'iife',
             sourcemap: true,

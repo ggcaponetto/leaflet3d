@@ -305,7 +305,7 @@
 	var version = "0.0.1";
 
 	loglevel.exports.setLevel(loglevel.exports.levels.DEBUG);
-	loglevel.exports.debug("Imported the leaflet-3D plugin");
+	loglevel.exports.debug("Imported the leaflet3d plugin");
 
 	class Plugin{
 	    constructor(props) {
@@ -318,11 +318,15 @@
 
 	// attach your plugin to the global 'L' variable
 	if (typeof window !== 'undefined' && window.L) {
-	    window.L.leaflet3d = new Plugin();
-	    window.addEventListener("load", () => {
-	        loglevel.exports.debug("Initialized the leaflet-3D plugin");
+	    if(document.readyState === "complete"){
+	        loglevel.exports.debug("Initialized the leaflet3d plugin");
 	        window.L.leaflet3d = new Plugin();
-	    });
+	    } else {
+	        window.addEventListener("load", () => {
+	            loglevel.exports.debug("Initialized the leaflet3d plugin");
+	            window.L.leaflet3d = new Plugin();
+	        });
+	    }
 	}
 
 })();

@@ -1,5 +1,5 @@
 {
-  "name": "leaflet-3d",
+  "name": "leaflet3d",
   "version": "0.0.1",
   "description": "A leaflet plugin to display 3D data.",
   "main": "index.js",
