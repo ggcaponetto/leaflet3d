@@ -1,0 +1,24 @@
+{
+  "name": "leaflet-3d",
+  "version": "0.0.1",
+  "description": "A leaflet plugin to display 3D data.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx rollup -c rollup.config.js",
+    "serve-dist": "npx http-server --cors -p 3001 dist",
+    "watch": "npx rollup -c rollup.config.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giuseppe Giulio Caponetto aka G-CELL",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "http-server": "^14.1.1",
+    "rollup": "^2.75.6"
+  },
+  "dependencies": {
+    "loglevel": "^1.8.0"
+  }
+}
